@@ -1,0 +1,77 @@
+[project]
+name = "critics-eye"
+version = "1.0.0"
+description = "MotifBench extraction pipeline: TEI parsing and criticism-derived motif extraction, from 'Critic's Eye: Review-Grounded Graph Reasoning for Long-Form Motif Discovery' (EMNLP 2026). Dataset: https://huggingface.co/datasets/Acture/MotifBench"
+readme = "README.md"
+license = "AGPL-3.0-or-later"
+requires-python = ">=3.12"
+dependencies = [
+	"aenum>=3.1.16",
+	"bs4>=0.0.2",
+	"datasets>=4.3.0",
+	"en-core-web-sm",
+	"glirel>=1.2.1",
+	"hdbscan>=0.8.40",
+	"huggingface-hub>=0.36.0",
+	"langchain>=1.0.2",
+	"langchain-huggingface>=1.0.0",
+	"langchain-text-splitters>=1.0.0",
+	"langfuse>=3.8.1",
+	"lxml",
+	"lxml-stubs>=0.5.1",
+	"matplotlib>=3.10.7",
+	"mpld3>=0.5.12",
+	"networkx>=3.5",
+	"optional>=0.0.1",
+	"pandas-stubs~=2.3.3",
+	"pillow>=11.3.0",
+	"plotext>=5.3.2",
+	"pydantic>=2.11.9",
+	"pydot>=4.0.1",
+	"pymupdf>=1.26.5",
+	"pyrefly>=0.60.0",
+	"pytesseract>=0.3.13",
+	"pytest>=9.0.1",
+	"rich>=14.1.0",
+	"seaborn>=0.13.2",
+	"sentence-transformers>=5.1.2",
+	"spacy>=3.8.7",
+	"spacy-layout>=0.0.12",
+	"spacy-llm>=0.7.3",
+	"torch>=2.9.0",
+	"torch-geometric>=2.7.0",
+	"tqdm>=4.67.1",
+	"ty>=0.0.29",
+	"typer>=0.12.5",
+	"uv-build>=0.8.22",
+	"xx-sent-ud-sm",
+	"httpx>=0.28.1",
+]
+
+[build-system]
+requires = ["uv-build>=0.8.22"]
+build-backend = "uv_build"
+
+[project.scripts]
+ce-cli = "critics_eye.cli.main:app"
+
+[tool.uv]
+upgrade = true
+find-links = ["https://data.pyg.org/whl/torch-2.13.0+cu130.html"]
+
+[tool.uv.sources]
+xx-sent-ud-sm = { url = "https://github.com/explosion/spacy-models/releases/download/xx_sent_ud_sm-3.8.0/xx_sent_ud_sm-3.8.0-py3-none-any.whl" }
+en-core-web-sm = { url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl" }
+
+[dependency-groups]
+dev = [
+	"pytest>=8.4.2",
+	"pytest-timeout>=2.4.0",
+]
+
+[tool.pytest.ini_options]
+addopts = "-s"
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "tab"

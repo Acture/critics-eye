@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ger999999" xml:lang="de">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Vers- und Prosaproben</title>
+        <author>
+          <persName>Testfall</persName>
+        </author>
+      </titleStmt>
+      <publicationStmt>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl type="digitalSource">
+          <name>Handcrafted regression fixture</name>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <particDesc>
+        <listPerson>
+          <person xml:id="faust" sex="MALE">
+            <persName>Faust</persName>
+          </person>
+          <person xml:id="wagner" sex="MALE">
+            <persName>Wagner</persName>
+          </person>
+        </listPerson>
+      </particDesc>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="scene">
+        <head>Zueignung</head>
+        <lg>
+          <l>Ihr naht euch wieder, schwankende Gestalten,</l>
+          <l>Die früh sich einst dem trüben Blick gezeigt.</l>
+        </lg>
+        <lg>
+          <l>Sie hören nicht die folgenden Gesänge,</l>
+          <l>Die Seelen, denen ich die ersten sang.</l>
+        </lg>
+      </div>
+      <div type="scene">
+        <head>Vorspiel auf dem Theater</head>
+        <p>Ein zweiter unnumerierter Auftritt: ohne n, ohne xml:id.</p>
+      </div>
+      <div type="act">
+        <head>Erster Aufzug</head>
+        <div type="scene">
+          <head>Erste Szene</head>
+          <label>Gesang.</label>
+          <lg>
+            <l>Ein Chor ohne Sprecher, direkt unter der Szene.</l>
+          </lg>
+          <sp who="#faust">
+            <speaker>Faust</speaker>
+            <l>Habe nun, ach! Philosophie,</l>
+            <l>Juristerei und Medizin.</l>
+          </sp>
+        </div>
+        <div type="scene">
+          <head>Zweite Szene</head>
+          <sp who="#wagner">
+            <speaker>Wagner</speaker>
+            <p>Eine Prosarede im ersten Aufzug.</p>
+          </sp>
+        </div>
+      </div>
+      <div type="act">
+        <head>Zweiter Aufzug</head>
+        <div type="scene">
+          <head>Erster Auftritt</head>
+          <sp who="#faust">
+            <speaker>Faust</speaker>
+            <l>Die Szenennummer wiederholt sich im zweiten Aufzug.</l>
+          </sp>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>

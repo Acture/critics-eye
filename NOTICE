@@ -1,0 +1,27 @@
+Critic's Eye — NOTICE (Third-Party Attributions)
+==================================================
+
+This repository ships only our own code (AGPL-3.0-licensed) and test fixtures we
+either wrote ourselves or verified are compatibly licensed. It does **not**
+ship the MotifBench dataset, criticism texts, or Folger Shakespeare Library
+text — those live in the separate dataset release (see README.md) under
+their own terms.
+
+Test fixtures
+--------------
+`tests/fixture/dracor/achat-ein-april-scherz.xml` is a DraCor (gerdracor) TEI
+fixture, CC0 1.0 (public domain dedication) — included.
+
+Three fixtures referenced by some tests are intentionally **not** included,
+because they are CC BY-NC 3.0 (Folger Shakespeare Library / DraCor
+shakedracor & engdracor) and this repository's code is AGPL-3.0-licensed:
+`tests/fixture/primary/{Mac,Oth,Lr}.xml` and
+`tests/fixture/dracor/{a-midsummer-nights-dream,a-the-valiant-welshman}.xml`.
+Obtain them yourself from folgerdigitaltexts.org / dracor.org (respecting
+their license) to run the full parser test suite.
+
+`tests/fixture/secondary/mac_reviews.jsonl` (extraction-parser test data) is
+also omitted: every record quotes a full sentence from a copyrighted
+criticism source. See `tests/fixture/secondary/README.md`.
+
+No other third-party source code or data is redistributed here.
